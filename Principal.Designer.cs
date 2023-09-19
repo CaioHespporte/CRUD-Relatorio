@@ -36,7 +36,8 @@
             cadastroDeProfessorToolStripMenuItem = new ToolStripMenuItem();
             cadastroCursoToolStripMenuItem = new ToolStripMenuItem();
             relatóriosToolStripMenuItem = new ToolStripMenuItem();
-            relatóriosDeAlunosToolStripMenuItem = new ToolStripMenuItem();
+            relatórioDeAlunosToolStripMenuItem = new ToolStripMenuItem();
+            relatórioDeProfessoresToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -84,17 +85,24 @@
             // 
             // relatóriosToolStripMenuItem
             // 
-            relatóriosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { relatóriosDeAlunosToolStripMenuItem });
+            relatóriosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { relatórioDeAlunosToolStripMenuItem, relatórioDeProfessoresToolStripMenuItem });
             relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
             relatóriosToolStripMenuItem.Size = new Size(71, 20);
             relatóriosToolStripMenuItem.Text = "Relatórios";
             // 
-            // relatóriosDeAlunosToolStripMenuItem
+            // relatórioDeAlunosToolStripMenuItem
             // 
-            relatóriosDeAlunosToolStripMenuItem.Name = "relatóriosDeAlunosToolStripMenuItem";
-            relatóriosDeAlunosToolStripMenuItem.Size = new Size(182, 22);
-            relatóriosDeAlunosToolStripMenuItem.Text = "Relatórios de Alunos";
-            relatóriosDeAlunosToolStripMenuItem.Click += relatóriosDeAlunosToolStripMenuItem_Click;
+            relatórioDeAlunosToolStripMenuItem.Name = "relatórioDeAlunosToolStripMenuItem";
+            relatórioDeAlunosToolStripMenuItem.Size = new Size(200, 22);
+            relatórioDeAlunosToolStripMenuItem.Text = "Relatório de Alunos";
+            relatórioDeAlunosToolStripMenuItem.Click += relatórioDeAlunosToolStripMenuItem_Click;
+            // 
+            // relatórioDeProfessoresToolStripMenuItem
+            // 
+            relatórioDeProfessoresToolStripMenuItem.Name = "relatórioDeProfessoresToolStripMenuItem";
+            relatórioDeProfessoresToolStripMenuItem.Size = new Size(200, 22);
+            relatórioDeProfessoresToolStripMenuItem.Text = "Relatório de Professores";
+            relatórioDeProfessoresToolStripMenuItem.Click += relatórioDeProfessoresToolStripMenuItem_Click;
             // 
             // Principal
             // 
@@ -125,6 +133,7 @@
         private ToolStripMenuItem cadastroDeProfessorToolStripMenuItem;
         private ToolStripMenuItem cadastroCursoToolStripMenuItem;
         private ToolStripMenuItem relatóriosToolStripMenuItem;
-        private ToolStripMenuItem relatóriosDeAlunosToolStripMenuItem;
+        private ToolStripMenuItem relatórioDeAlunosToolStripMenuItem;
+        private ToolStripMenuItem relatórioDeProfessoresToolStripMenuItem;
     }
 }

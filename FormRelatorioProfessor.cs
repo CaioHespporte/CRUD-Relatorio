@@ -16,18 +16,13 @@ using Spire.Pdf.Tables;
 
 namespace projeto4
 {
-    public partial class FormRelatorioAluno : MaterialForm
+    public partial class FormRelatorioProfessor : MaterialForm
     {
         string cs = @"server=127.0.0.1;" + "uid=root;" + "pwd=;" + "database=academico";
-        public FormRelatorioAluno()
+        public FormRelatorioProfessor()
         {
             InitializeComponent();
             CarregaImpressoras();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void CarregaImpressoras()
@@ -42,7 +37,7 @@ namespace projeto4
         {
             var con = new MySqlConnection(cs);
             con.Open();
-            var sql = "SELECT * FROM aluno WHERE 1 = 1";
+            var sql = "SELECT * FROM professor WHERE 1 = 1";
             if (cboEstado.Text != "")
                 sql += " and estado = @estado";
             if (txtCidade.Text != "")
@@ -67,7 +62,7 @@ namespace projeto4
             PdfBrush brush1 = PdfBrushes.Black;
             PdfTrueTypeFont font1 = new PdfTrueTypeFont(new Font("Arial", 14f, FontStyle.Bold));
             PdfStringFormat format1 = new PdfStringFormat(PdfTextAlignment.Center);
-            page.Canvas.DrawString("Relatório de Alunos", font1, brush1, page.Canvas.ClientSize.Width / 2, y, format1);
+            page.Canvas.DrawString("Relatório de Professores", font1, brush1, page.Canvas.ClientSize.Width / 2, y, format1);
 
             PdfTable table = new PdfTable();
             table.Style.CellPadding = 2;
@@ -83,7 +78,7 @@ namespace projeto4
             }
             table.Draw(page, new PointF(0, y = 20));
 
-            doc.SaveToFile("RelatoriosAlunos.pdf");
+            doc.SaveToFile("RelatoriosProfessores.pdf");
 
             con.Close();
         }
@@ -93,7 +88,7 @@ namespace projeto4
             if (cboImpressora.Text != "")
             {
                 PdfDocument doc = new PdfDocument();
-                doc.LoadFromFile("RelatoriosAlunos.pdf");
+                doc.LoadFromFile("RelatoriosProfessores.pdf");
 
                 //configs da impressora
                 doc.PrintSettings.PrinterName = cboImpressora.Text;
@@ -122,12 +117,13 @@ namespace projeto4
         {
             MontaRelatorio();
             var p = new Process();
-            p.StartInfo = new ProcessStartInfo(@"RelatoriosAlunos.pdf")
+            p.StartInfo = new ProcessStartInfo(@"RelatoriosProfessores.pdf")
             {
                 UseShellExecute = true
             };
             p.Start();
         }
+
     }
 
 }
