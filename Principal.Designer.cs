@@ -38,6 +38,7 @@
             relatóriosToolStripMenuItem = new ToolStripMenuItem();
             relatórioDeAlunosToolStripMenuItem = new ToolStripMenuItem();
             relatórioDeProfessoresToolStripMenuItem = new ToolStripMenuItem();
+            relatórioDeCursosToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -85,7 +86,7 @@
             // 
             // relatóriosToolStripMenuItem
             // 
-            relatóriosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { relatórioDeAlunosToolStripMenuItem, relatórioDeProfessoresToolStripMenuItem });
+            relatóriosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { relatórioDeAlunosToolStripMenuItem, relatórioDeProfessoresToolStripMenuItem, relatórioDeCursosToolStripMenuItem });
             relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
             relatóriosToolStripMenuItem.Size = new Size(71, 20);
             relatóriosToolStripMenuItem.Text = "Relatórios";
@@ -103,6 +104,13 @@
             relatórioDeProfessoresToolStripMenuItem.Size = new Size(200, 22);
             relatórioDeProfessoresToolStripMenuItem.Text = "Relatório de Professores";
             relatórioDeProfessoresToolStripMenuItem.Click += relatórioDeProfessoresToolStripMenuItem_Click;
+            // 
+            // relatórioDeCursosToolStripMenuItem
+            // 
+            relatórioDeCursosToolStripMenuItem.Name = "relatórioDeCursosToolStripMenuItem";
+            relatórioDeCursosToolStripMenuItem.Size = new Size(200, 22);
+            relatórioDeCursosToolStripMenuItem.Text = "Relatório de Cursos";
+            relatórioDeCursosToolStripMenuItem.Click += relatórioDeCursosToolStripMenuItem_Click;
             // 
             // Principal
             // 
@@ -135,5 +143,6 @@
         private ToolStripMenuItem relatóriosToolStripMenuItem;
         private ToolStripMenuItem relatórioDeAlunosToolStripMenuItem;
         private ToolStripMenuItem relatórioDeProfessoresToolStripMenuItem;
+        private ToolStripMenuItem relatórioDeCursosToolStripMenuItem;
     }
 }
