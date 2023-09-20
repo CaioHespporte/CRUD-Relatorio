@@ -67,7 +67,7 @@
             materialTabControl1.Multiline = true;
             materialTabControl1.Name = "materialTabControl1";
             materialTabControl1.SelectedIndex = 0;
-            materialTabControl1.Size = new Size(684, 389);
+            materialTabControl1.Size = new Size(705, 439);
             materialTabControl1.TabIndex = 9;
             // 
             // tabPage1
@@ -87,7 +87,7 @@
             tabPage1.Location = new Point(4, 31);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(676, 354);
+            tabPage1.Size = new Size(697, 404);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Cadastro";
             tabPage1.UseVisualStyleBackColor = true;
@@ -525,7 +525,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(690, 456);
+            ClientSize = new Size(711, 506);
             Controls.Add(materialTabControl1);
             DrawerTabControl = materialTabControl1;
             Name = "FormAluno";
