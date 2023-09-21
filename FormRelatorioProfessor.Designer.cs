@@ -227,6 +227,7 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "FormRelatorioProfessor";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Relatório de Professores";
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
